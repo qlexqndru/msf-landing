@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
     const errorDetails: {
       message: string;
       status: number | null;
-      data: any;
+      data: unknown;
     } = {
       message: 'An error occurred while submitting the form. Please try again.',
       status: null,
