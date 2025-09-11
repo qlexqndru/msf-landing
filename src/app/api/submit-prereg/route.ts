@@ -54,7 +54,11 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error submitting to SeaTable:', error);
     
-    const errorDetails = {
+    const errorDetails: {
+      message: string;
+      status: number | null;
+      data: any;
+    } = {
       message: 'An error occurred while submitting the form. Please try again.',
       status: null,
       data: null
@@ -64,8 +68,8 @@ export async function POST(request: NextRequest) {
       console.error('Response data:', error.response?.data);
       console.error('Response status:', error.response?.status);
       
-      errorDetails.status = error.response?.status;
-      errorDetails.data = error.response?.data;
+      errorDetails.status = error.response?.status || null;
+      errorDetails.data = error.response?.data || null;
       
       // More specific error messages
       if (error.response?.status === 401) {
