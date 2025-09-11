@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,12 +28,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Script
-          id="toolbar-script"
-          strategy="afterInteractive"
-          data-toolbar-api-key="c23c3a00-02a6-4a61-b1f3-8b257da0184c"
-          src="https://get.usetool.bar/embedded-app.js"
-        />
       </body>
     </html>
   );

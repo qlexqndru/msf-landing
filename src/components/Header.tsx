@@ -75,6 +75,13 @@ export default function Header() {
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
       />
+      
+      <script 
+        async 
+        id="toolbar-script" 
+        data-toolbar-api-key="c23c3a00-02a6-4a61-b1f3-8b257da0184c" 
+        src="https://get.usetool.bar/embedded-app.js"
+      />
     </header>
   )
 }
