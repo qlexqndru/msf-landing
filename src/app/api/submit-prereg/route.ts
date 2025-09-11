@@ -12,8 +12,6 @@ export async function POST(request: NextRequest) {
 
     // Prepare data for SeaTable
     const seatableData = {
-      name: formData.name,
-      surname: formData.surname,
       email: formData.email,
       createdAt: new Date().toISOString()
     };
