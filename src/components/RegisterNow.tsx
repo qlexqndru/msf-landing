@@ -26,7 +26,7 @@ export default function RegisterNow() {
             <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               Join us at one of the most significant security events in the region, 
               bringing together leaders, experts, and practitioners from across the 
-              world to discuss Moldova's security challenges, regional stability, 
+              world to discuss Moldova&apos;s security challenges, regional stability, 
               and evolving global threats. The forum offers a unique platform for 
               high-level debates on security policies, EU and NATO partnerships, 
               and the future of resilience in Moldova and beyond.

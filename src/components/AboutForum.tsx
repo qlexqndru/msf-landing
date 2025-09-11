@@ -17,7 +17,7 @@ export default function AboutForum() {
 
           {/* Description */}
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            We will bring together leaders, experts, and practitioners from across the world to discuss Moldova's 
+            We will bring together leaders, experts, and practitioners from across the world to discuss Moldova&apos;s 
             security challenges, regional stability, and emerging threats. The forum offers a unique platform 
             for high-level debates on security policies, EU and NATO partnerships, and the future of resilience in 
             Moldova and beyond.

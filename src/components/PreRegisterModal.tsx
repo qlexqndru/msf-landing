@@ -104,7 +104,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                 placeholder="Enter your email address"
               />
               <p className="text-xs text-gray-500 mt-1">
-                We'll send you updates about Moldova Security Forum 2025
+                We&apos;ll send you updates about Moldova Security Forum 2025
               </p>
             </div>
           </div>

@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     const { access_token } = tokenResponse.data;
 
     // Step 2: Add row using base token
-    const response = await axios.post(
+    await axios.post(
       `${SEATABLE_SERVER}/api-gateway/api/v2/dtables/${SEATABLE_BASE_UUID}/rows/`,
       {
         table_name: TABLE_NAME,
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error submitting to SeaTable:', error);
     
-    let errorDetails = {
+    const errorDetails = {
       message: 'An error occurred while submitting the form. Please try again.',
       status: null,
       data: null

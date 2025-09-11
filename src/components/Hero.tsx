@@ -33,7 +33,7 @@ export default function Hero() {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             Join us at one of the most significant security events in the region,
             bringing together leaders, experts, and practitioners from across the
-            world to discuss Moldova's security challenges, regional stability,
+            world to discuss Moldova&apos;s security challenges, regional stability,
             and evolving global threats.
           </p>
 
