@@ -8,9 +8,9 @@ export default function Footer() {
           {/* Column 1 - Navigation Links */}
           <div>
             <ul className="space-y-2">
-              <li><a href="#agenda" className="text-gray-300 hover:text-white transition-colors text-sm">Agenda</a></li>
-              <li><a href="#speakers" className="text-gray-300 hover:text-white transition-colors text-sm">Speakers</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors text-sm">About MSF 2025</a></li>
+              <li><a href="/agenda" className="text-gray-300 hover:text-white transition-colors text-sm">Agenda</a></li>
+              <li><a href="/#about" className="text-gray-300 hover:text-white transition-colors text-sm">About MSF 2025</a></li>
+              <li><a href="/#contact" className="text-gray-300 hover:text-white transition-colors text-sm">Contact Us</a></li>
             </ul>
           </div>
 

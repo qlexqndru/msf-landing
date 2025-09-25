@@ -26,7 +26,7 @@ export default function Hero() {
 
           {/* Date and Location */}
           <p className="text-xl md:text-2xl text-blue-100 mb-8 font-medium">
-            19-20 November 2025 | Chișinău, Republic of Moldova
+            18-19 November 2025 | MAIB Park, Chișinău
           </p>
 
           {/* Description */}
@@ -42,7 +42,7 @@ export default function Hero() {
             onClick={() => setIsModalOpen(true)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors duration-200 flex items-center gap-3 mx-auto"
           >
-            PRE-REGISTER HERE
+            REGISTER HERE
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

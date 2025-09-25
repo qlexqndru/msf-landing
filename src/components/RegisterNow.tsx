@@ -19,7 +19,7 @@ export default function RegisterNow() {
           <div className="relative z-10 p-12 text-center">
             {/* Title */}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              PRE-REGISTER NOW
+              REGISTER NOW
             </h2>
 
             {/* Description */}
@@ -37,7 +37,7 @@ export default function RegisterNow() {
               onClick={() => setIsModalOpen(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors duration-200 flex items-center gap-3 mx-auto"
             >
-              PRE-REGISTER HERE
+              REGISTER HERE
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

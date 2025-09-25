@@ -2,12 +2,8 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import AboutForum from '@/components/AboutForum'
 import KeyTopics from '@/components/KeyTopics'
-import Highlights from '@/components/Highlights'
-import WhyAttend from '@/components/WhyAttend'
-import Speakers from '@/components/Speakers'
+import LastYear from '@/components/LastYear'
 import RegisterNow from '@/components/RegisterNow'
-import Partners from '@/components/Partners'
-import MassMedia from '@/components/MassMedia'
 import ContactUs from '@/components/ContactUs'
 import Footer from '@/components/Footer'
 
@@ -18,12 +14,8 @@ export default function Home() {
       <Hero />
       <AboutForum />
       <KeyTopics />
-      <Highlights />
-      <WhyAttend />
-      <Speakers />
+      <LastYear />
       <RegisterNow />
-      <Partners />
-      <MassMedia />
       <ContactUs />
       <Footer />
     </div>

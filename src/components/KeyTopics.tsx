@@ -1,20 +1,28 @@
 export default function KeyTopics() {
   const topics = [
     {
-      title: "Moldova's security vision",
-      image: "military-silhouette"
+      title: "Democracy Under Siege: Information Warfare",
+      image: "info-warfare"
     },
     {
-      title: "EU Integration for security", 
-      image: "military-silhouette"
+      title: "Black Sea Regional Resilience", 
+      image: "regional-security"
     },
     {
-      title: "NATO at 75",
-      image: "military-silhouette"
+      title: "Cyber Threats & Digital Democracy",
+      image: "cyber-security"
     },
     {
-      title: "Hybrid warfare",
-      image: "military-silhouette"
+      title: "Energy Security & Dependencies",
+      image: "energy-security"
+    },
+    {
+      title: "Electoral Integrity & Financial Corruption",
+      image: "electoral-security"
+    },
+    {
+      title: "Strategic Communication Against Disinformation",
+      image: "strategic-comm"
     }
   ]
 
@@ -26,16 +34,16 @@ export default function KeyTopics() {
           <h2 className="text-4xl font-bold text-blue-800">
             KEY TOPICS
           </h2>
-          <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2">
+          <a href="/agenda" className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2">
             View the full agenda
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </button>
+          </a>
         </div>
 
         {/* Topics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {topics.map((topic, index) => (
             <div 
               key={index}

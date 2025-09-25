@@ -25,31 +25,19 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link 
-              href="#about" 
+              href="/#about" 
               className="text-gray-700 hover:text-blue-600 font-medium"
             >
               About MSF
             </Link>
             <Link 
-              href="#speakers" 
-              className="text-gray-700 hover:text-blue-600 font-medium"
-            >
-              Speakers
-            </Link>
-            <Link 
-              href="#agenda" 
+              href="/agenda" 
               className="text-gray-700 hover:text-blue-600 font-medium"
             >
               Agenda
             </Link>
             <Link 
-              href="#partners" 
-              className="text-gray-700 hover:text-blue-600 font-medium"
-            >
-              Partners
-            </Link>
-            <Link 
-              href="#contact" 
+              href="/#contact" 
               className="text-gray-700 hover:text-blue-600 font-medium"
             >
               Contact Us
@@ -62,7 +50,7 @@ export default function Header() {
               onClick={() => setIsModalOpen(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition-colors duration-200 flex items-center gap-2"
             >
-              PRE-REGISTER NOW
+              REGISTER NOW
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
