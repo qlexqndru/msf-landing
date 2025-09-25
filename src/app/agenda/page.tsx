@@ -37,7 +37,7 @@ export default function AgendaPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-blue-800 mb-3">Opening Plenary</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Moldova's vision for countering hybrid threats and enhancing national resilience
+                    Moldova&apos;s vision for countering hybrid threats and enhancing national resilience
                   </p>
                 </div>
 
@@ -51,7 +51,7 @@ export default function AgendaPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session II</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Democracy under siege: foreign information manipulations and interference in Moldova's electoral process
+                    Democracy under siege: foreign information manipulations and interference in Moldova&apos;s electoral process
                   </p>
                 </div>
 
@@ -105,7 +105,7 @@ export default function AgendaPage() {
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <h4 className="font-semibold text-blue-800 mb-2">Session B2</h4>
                       <p className="text-gray-700 text-sm">
-                        Behind the Screens: Cyber Threats, Surveillance Tactics, and the Battle for Moldova's Democracy
+                        Behind the Screens: Cyber Threats, Surveillance Tactics, and the Battle for Moldova&apos;s Democracy
                       </p>
                     </div>
                   </div>

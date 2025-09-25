@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 export default function LastYear() {
   const [currentImage, setCurrentImage] = useState(0)
@@ -162,7 +161,7 @@ export default function LastYear() {
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <span className="text-gray-700">NATO's evolving partnerships and cooperation</span>
+                <span className="text-gray-700">NATO&apos;s evolving partnerships and cooperation</span>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -206,7 +205,7 @@ export default function LastYear() {
         {/* Impact Statement */}
         <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-8 text-center">
           <blockquote className="text-xl text-gray-800 italic mb-4">
-            "Moldova Security Forum offers a unique opportunity to address security challenges head-on and identify solutions to increase security, resilience and alignment of Moldova with the European community."
+            &ldquo;Moldova Security Forum offers a unique opportunity to address security challenges head-on and identify solutions to increase security, resilience and alignment of Moldova with the European community.&rdquo;
           </blockquote>
           <cite className="text-gray-600 font-medium">Iulian Groza, Executive Director IPRE</cite>
         </div>

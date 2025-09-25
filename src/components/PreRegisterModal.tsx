@@ -326,7 +326,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                       className="mt-1 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded transition-colors"
                     />
                     <span className="ml-3 text-sm text-gray-700 leading-relaxed">
-                      <strong>Terms & Conditions:</strong> I agree to the event's terms & conditions and code of conduct. *
+                      <strong>Terms & Conditions:</strong> I agree to the event&apos;s terms & conditions and code of conduct. *
                     </span>
                   </label>
                 </div>
