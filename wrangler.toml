@@ -1,0 +1,10 @@
+name = "msf-landing"
+compatibility_date = "2024-09-27"
+
+[build]
+command = "npm run build"
+directory = ".next"
+
+[[pages.rules]]
+pattern = "/api/*"
+function = true
