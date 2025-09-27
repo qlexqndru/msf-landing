@@ -3,9 +3,7 @@ command = "npm run build"
 directory = ".next"
 
 [build.environment]
-NODE_VERSION = "18"
+NODE_VERSION = "20"
 
-[[redirects]]
-from = "/api/*"
-to = "/api/:splat"
-status = 200
+[functions]
+directory = "functions"
