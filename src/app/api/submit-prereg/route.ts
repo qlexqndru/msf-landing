@@ -12,7 +12,16 @@ export async function POST(request: NextRequest) {
 
     // Prepare data for SeaTable
     const seatableData = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      jobTitle: formData.jobTitle,
+      institution: formData.institution,
       email: formData.email,
+      phone: formData.phone || '',
+      dietaryPreferences: formData.dietaryPreferences || '',
+      accessibilityNeeds: formData.accessibilityNeeds || '',
+      dataConsent: formData.dataConsent,
+      termsConsent: formData.termsConsent,
       createdAt: new Date().toISOString()
     };
 

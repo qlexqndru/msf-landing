@@ -1,16 +1,18 @@
+import Image from 'next/image'
+
 export default function AboutForum() {
   return (
-    <section id="about" className="py-20" style={{ backgroundColor: '#F0EFF1' }}>
+    <section id="about" className="py-20" style={{ backgroundColor: '#E8EDF5' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Section Header */}
-          <p className="text-blue-600 font-semibold text-lg mb-4 tracking-wide">
+          <p className="font-semibold text-lg mb-4 tracking-wide" style={{ color: '#034889' }}>
             ABOUT THE FORUM
           </p>
           
           {/* Main Title */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="text-blue-600">DEMOCRACY UNDER PRESSURE:</span><br />
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+            <span style={{ color: '#034889' }}>DEMOCRACY UNDER PRESSURE:</span><br />
             COUNTERING HYBRID THREATS IN A<br />
             FRACTURED SECURITY ORDER
           </h2>
@@ -19,7 +21,7 @@ export default function AboutForum() {
           <div className="mb-8">
             <p className="text-xl font-semibold text-gray-800 mb-2">Second Edition</p>
             <p className="text-lg text-gray-600 mb-4">18–19 November 2025 | MAIB Park, Chișinău</p>
-            <p className="text-lg text-blue-600 font-medium">Expected 250+ Participants</p>
+            <p className="text-lg font-medium" style={{ color: '#034889' }}>Expected 250+ Participants</p>
           </div>
 
           {/* Description */}
@@ -38,25 +40,53 @@ export default function AboutForum() {
           </div>
 
           {/* Organizers */}
-          <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">Organized by</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Konrad Adenauer Stiftung</h4>
-                <p className="text-sm text-gray-600">(KAS)</p>
+          <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">Organized by</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+              <div className="flex items-center justify-center p-4">
+                <Image
+                  src="/mae-logo.jpeg"
+                  alt="Ministry of Foreign Affairs of Moldova"
+                  width={180}
+                  height={90}
+                  className="max-w-full max-h-24 object-contain"
+                  unoptimized={true}
+                />
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">NATO Liaison Office</h4>
-                <p className="text-sm text-gray-600">(NLO)</p>
+              <div className="flex items-center justify-center p-4">
+                <Image
+                  src="/logo-ipre.jpeg"
+                  alt="Institute for European Policies and Reforms (IPRE)"
+                  width={180}
+                  height={90}
+                  className="max-w-full max-h-24 object-contain"
+                  unoptimized={true}
+                />
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Institute for European Policies and Reforms</h4>
-                <p className="text-sm text-gray-600">(IPRE)</p>
+              <div className="flex items-center justify-center p-4">
+                <Image
+                  src="/logo-kas.png"
+                  alt="Konrad Adenauer Stiftung (KAS)"
+                  width={180}
+                  height={90}
+                  className="max-w-full max-h-24 object-contain"
+                  unoptimized={true}
+                />
+              </div>
+              <div className="flex items-center justify-center p-4">
+                <Image
+                  src="/logo-nato.jpg"
+                  alt="NATO"
+                  width={300}
+                  height={180}
+                  className="max-w-full max-h-48 object-contain"
+                  unoptimized={true}
+                />
               </div>
             </div>
-            <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-center text-gray-600 text-sm">
-                In close cooperation with the Presidency of the Republic of Moldova and the Ministry of Foreign Affairs
+                In partnership with regional and international security organizations
               </p>
             </div>
           </div>

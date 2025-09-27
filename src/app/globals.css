@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Exo+2:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #F0EFF1;
-  --foreground: #171717;
+  --background-light: #F5F7FA;
+  --background: #E8EDF5;
+  --foreground: #1A2332;
+  --primary: #2E5A8A;
+  --primary-dark: #1A2C42;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   line-height: 1.6;
 }
 
@@ -28,18 +29,18 @@ html {
   box-sizing: border-box;
 }
 
-/* Title styles with Inter font */
+/* Title styles with Helvetica Neue font */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
-/* Main hero title with Exo 2 font */
+/* Main hero title with Helvetica Neue bold */
 .hero-title {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 

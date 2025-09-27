@@ -7,27 +7,29 @@ export default function AgendaPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-blue-800 py-20">
+      <section className="relative py-20" style={{
+        background: 'linear-gradient(135deg, #034889 0%, #031226 100%)'
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             AGENDA
           </h1>
-          <p className="text-xl text-blue-100 mb-4">
+          <p className="text-xl text-blue-200 mb-4">
             Moldova Security Forum 2025
           </p>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
             Two days of intensive discussions on hybrid threats, regional security, and democratic resilience
           </p>
         </div>
       </section>
 
       {/* Agenda Content */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Day 1 */}
           <div className="mb-16">
-            <div className="bg-blue-900 text-white p-6 rounded-t-2xl">
+            <div className="text-white p-6 rounded-t-2xl" style={{ backgroundColor: '#034889' }}>
               <h2 className="text-3xl font-bold">Day 1 – 18 November 2025</h2>
             </div>
             
@@ -35,30 +37,30 @@ export default function AgendaPage() {
               <div className="divide-y divide-gray-200">
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Opening Plenary</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Opening Plenary | Moldova's vision for countering hybrid threats and enhancing national resilience</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Moldova&apos;s vision for countering hybrid threats and enhancing national resilience
+                    The opening session will outline Moldova's strategic vision for strengthening national resilience against hybrid threats. It will highlight prevention measures, institutional adaptability, and the importance of international partnerships in safeguarding democracy and security.
                   </p>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session I</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session I | Building Resilience in the Black Sea Region</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Building Resilience in the Black Sea Region
+                    This session will explore how Black Sea countries can enhance regional cooperation to address shared vulnerabilities. Best practices, joint initiatives, and policy frameworks will be discussed as key tools for strengthening collective resilience.
                   </p>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session II</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session II | Democracy under siege: foreign information manipulations and interference in Moldova's electoral process</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Democracy under siege: foreign information manipulations and interference in Moldova&apos;s electoral process
+                    Participants will examine the growing threat of foreign disinformation and electoral interference targeting Moldova's democratic processes. The discussion will emphasize transparency, citizen awareness, and protective mechanisms to ensure free and fair elections.
                   </p>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session III</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session III | From Risk to Resilience: Crisis Management in the New Age of Hybrid Threats</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    From Risk to Resilience: Crisis Management in the New Age of Hybrid Threats
+                    The session will focus on how hybrid threats generate new forms of crises requiring innovative management strategies. Experts will share approaches for turning vulnerabilities into long-term resilience capabilities.
                   </p>
                 </div>
 
@@ -68,7 +70,7 @@ export default function AgendaPage() {
 
           {/* Day 2 */}
           <div className="mb-16">
-            <div className="bg-blue-900 text-white p-6 rounded-t-2xl">
+            <div className="text-white p-6 rounded-t-2xl" style={{ backgroundColor: '#034889' }}>
               <h2 className="text-3xl font-bold">Day 2 – 19 November 2025</h2>
             </div>
             
@@ -79,15 +81,15 @@ export default function AgendaPage() {
                   <h3 className="text-xl font-bold text-blue-800 mb-3">Parallel Sessions A</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-blue-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-blue-800 mb-2">Session A1</h4>
+                      <h4 className="font-semibold text-blue-800 mb-2">Parallel Session A1 | Fight against disinformation and strengthening of strategic communication</h4>
                       <p className="text-gray-700 text-sm">
-                        Fight against disinformation and strengthening of strategic communication
+                        This session will address effective strategies to counter disinformation and improve strategic communication. Participants will discuss ways to build credible narratives that resist hostile campaigns and strengthen public trust.
                       </p>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-blue-800 mb-2">Session A2</h4>
+                      <h4 className="font-semibold text-blue-800 mb-2">Parallel Session A2 | Strengthening energy security through strategic vision and cooperation</h4>
                       <p className="text-gray-700 text-sm">
-                        Strengthening energy security through strategic vision and cooperation
+                        The debate will highlight energy security as a cornerstone of national resilience. It will focus on opportunities for regional cooperation and the development of a long-term strategic vision to reduce vulnerabilities.
                       </p>
                     </div>
                   </div>
@@ -97,24 +99,24 @@ export default function AgendaPage() {
                   <h3 className="text-xl font-bold text-blue-800 mb-3">Parallel Sessions B</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-blue-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-blue-800 mb-2">Session B1</h4>
+                      <h4 className="font-semibold text-blue-800 mb-2">Parallel Session B1 | Electoral corruption and illegal financial streams</h4>
                       <p className="text-gray-700 text-sm">
-                        Electoral corruption and illegal financial streams
+                        This session will analyze how electoral corruption and illicit financial flows undermine democratic systems, especially looking at the experiences during electoral period of time in the Republic of Moldova. Discussions will emphasize monitoring tools, preventive mechanisms, and enforcement measures to protect electoral integrity.
                       </p>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-blue-800 mb-2">Session B2</h4>
+                      <h4 className="font-semibold text-blue-800 mb-2">Parallel Session B2 | Behind the Screens: Cyber Threats, Surveillance Tactics, and the Battle for Moldova's Democracy</h4>
                       <p className="text-gray-700 text-sm">
-                        Behind the Screens: Cyber Threats, Surveillance Tactics, and the Battle for Moldova&apos;s Democracy
+                        Participants will explore the rising risks posed by cyberattacks and surveillance tactics that threaten democratic institutions. The session will stress the need for a secure digital infrastructure and strong cyber defense capacities.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Final Plenary</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Final Plenary | From Mapping to Response: A Shared Strategy for Countering Hybrid Threats in the Black Sea region</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    From Mapping to Response: A Shared Strategy for Countering Hybrid Threats in the Black Sea region
+                    The final plenary will consolidate the conference's findings into a regional strategy for countering hybrid threats. It will underline the shift from threat-mapping to coordinated, actionable responses at the Black Sea level.
                   </p>
                 </div>
 

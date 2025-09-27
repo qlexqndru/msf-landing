@@ -10,15 +10,16 @@ interface PreRegisterModalProps {
 
 export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalProps) {
   const [formData, setFormData] = useState({
-    name: '',
-    jobTitle: '',
-    institution: '',
-    email: '',
-    phone: '',
-    dietaryPreferences: '',
-    accessibilityNeeds: '',
-    dataConsent: false,
-    termsConsent: false
+    firstName: 'John',
+    lastName: 'Doe',
+    jobTitle: 'Security Analyst',
+    institution: 'Ministry of Defense',
+    email: 'john.doe@example.com',
+    phone: '+373 69 123 456',
+    dietaryPreferences: 'Vegetarian, no nuts',
+    accessibilityNeeds: 'Wheelchair accessible seating',
+    dataConsent: true,
+    termsConsent: true
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,7 +50,8 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
       if (result.success) {
         alert('Thank you for registering! We will contact you soon.')
         setFormData({
-          name: '',
+          firstName: '',
+          lastName: '',
           jobTitle: '',
           institution: '',
           email: '',
@@ -130,21 +132,40 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Name Field */}
+                {/* First Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Name and Surname *
+                  <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
+                    First Name *
                   </label>
                   <div className="relative">
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id="firstName"
+                      name="firstName"
                       required
-                      value={formData.name}
+                      value={formData.firstName}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
-                      placeholder="Enter your full name"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                </div>
+
+                {/* Last Name Field */}
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Last Name *
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                      placeholder="Enter your last name"
                     />
                   </div>
                 </div>
@@ -347,7 +368,20 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
               <button
                 type="submit"
                 disabled={isSubmitting || !formData.dataConsent || !formData.termsConsent}
-                className="flex-1 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2"
+                className="flex-1 px-6 py-3 text-sm font-semibold text-white rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2 disabled:opacity-50"
+                style={{ 
+                  backgroundImage: 'linear-gradient(135deg, #034889 0%, #031226 100%)'
+                }}
+                onMouseEnter={(e) => {
+                  if (!e.currentTarget.disabled) {
+                    e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #031226 0%, #034889 100%)'
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!e.currentTarget.disabled) {
+                    e.currentTarget.style.backgroundImage = 'linear-gradient(135deg, #034889 0%, #031226 100%)'
+                  }
+                }}
               >
                 {isSubmitting ? (
                   <>

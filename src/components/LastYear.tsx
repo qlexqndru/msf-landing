@@ -56,7 +56,7 @@ export default function LastYear() {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
   }
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20" style={{ backgroundColor: 'rgba(3, 72, 137, 0.05)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -112,9 +112,10 @@ export default function LastYear() {
                 onClick={() => setCurrentImage(index)}
                 className={`relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 transition-all duration-200 ${
                   index === currentImage 
-                    ? 'ring-4 ring-blue-500 shadow-lg' 
+                    ? 'ring-4 shadow-lg' 
                     : 'opacity-70 hover:opacity-100'
                 }`}
+                style={index === currentImage ? { '--tw-ring-color': '#034889' } : {}}
               >
                 <img
                   src={image.src}
@@ -129,19 +130,19 @@ export default function LastYear() {
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+            <div className="text-4xl font-bold mb-2" style={{ color: '#034889' }}>500+</div>
             <div className="text-gray-700">Participants</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">28</div>
+            <div className="text-4xl font-bold mb-2" style={{ color: '#034889' }}>28</div>
             <div className="text-gray-700">Countries</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">2</div>
+            <div className="text-4xl font-bold mb-2" style={{ color: '#034889' }}>2</div>
             <div className="text-gray-700">Days</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">1st</div>
+            <div className="text-4xl font-bold mb-2" style={{ color: '#034889' }}>1st</div>
             <div className="text-gray-700">Edition</div>
           </div>
         </div>
@@ -152,23 +153,23 @@ export default function LastYear() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Focus Areas</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Resilience against hybrid attacks and disinformation</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Cybersecurity and artificial intelligence threats</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">NATO&apos;s evolving partnerships and cooperation</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">EU as a security actor in the region</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Democratic protection and electoral integrity</span>
               </li>
             </ul>
@@ -178,23 +179,23 @@ export default function LastYear() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Distinguished Speakers</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Igor Grosu, Speaker of Parliament of Moldova</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Justin Suni, Acting Head of NATO Liaison Office</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Jānis Mažeiks, EU Ambassador to Moldova</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">International security experts and policymakers</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
                 <span className="text-gray-700">Representatives from 28 countries</span>
               </li>
             </ul>
