@@ -52,7 +52,7 @@ export default function KeyTopics() {
           <h2 className="text-4xl font-bold" style={{ color: '#034889' }}>
             KEY TOPICS
           </h2>
-          <a href="/agenda" className="font-medium flex items-center gap-2 transition-colors duration-200" style={{ color: '#034889' }} onMouseEnter={(e) => e.target.style.color = '#031226'} onMouseLeave={(e) => e.target.style.color = '#034889'}>
+          <a href="/agenda" className="font-medium flex items-center gap-2 transition-colors duration-200" style={{ color: '#034889' }} onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = '#031226'} onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = '#034889'}>
             View the full agenda
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function LastYear() {
   const [currentImage, setCurrentImage] = useState(0)
@@ -71,9 +72,11 @@ export default function LastYear() {
         {/* Photo Carousel */}
         <div className="relative mb-16">
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-            <img
+            <Image
               src={images[currentImage].src}
               alt={images[currentImage].alt}
+              width={800}
+              height={400}
               className="w-full h-full object-cover transition-opacity duration-500"
             />
             
@@ -115,11 +118,13 @@ export default function LastYear() {
                     ? 'ring-4 shadow-lg' 
                     : 'opacity-70 hover:opacity-100'
                 }`}
-                style={index === currentImage ? { '--tw-ring-color': '#034889' } : {}}
+                style={index === currentImage ? { '--tw-ring-color': '#034889' } as React.CSSProperties : {}}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
+                  width={80}
+                  height={60}
                   className="w-full h-full object-cover"
                 />
               </button>

@@ -14,9 +14,30 @@ export default function Hero() {
           muted 
           loop 
           playsInline
+          poster="/video-poster.jpg"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/MSF bg2.mp4" type="video/mp4" />
+          {/* WebM for better compression and browser support */}
+          <source 
+            src="/msf-bg-desktop.webm" 
+            type="video/webm"
+            media="(min-width: 768px)"
+          />
+          {/* Optimized MP4 for desktop */}
+          <source 
+            src="/msf-bg-desktop.mp4" 
+            type="video/mp4"
+            media="(min-width: 768px)"
+          />
+          {/* Mobile-optimized version */}
+          <source 
+            src="/msf-bg-mobile.mp4" 
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          {/* Fallback for older browsers */}
+          <source src="/msf-bg-desktop.mp4" type="video/mp4" />
         </video>
         
         {/* Video overlay for better text readability */}

@@ -41,8 +41,8 @@ export default function RegisterNow() {
                 border: '1px solid rgba(255,255,255,0.3)',
                 backdropFilter: 'blur(10px)'
               }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.3)'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+              onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(255,255,255,0.3)'}
+              onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(255,255,255,0.2)'}
             >
               REGISTER HERE
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

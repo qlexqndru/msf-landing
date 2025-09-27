@@ -27,7 +27,7 @@ export default function Header() {
             <Link 
               href="/#about" 
               className="text-gray-700 font-medium transition-opacity hover:opacity-70"
-              style={{ '--hover-color': '#2E5A8A' }}
+              style={{ color: '#2E5A8A' } as React.CSSProperties}
             >
               About MSF
             </Link>

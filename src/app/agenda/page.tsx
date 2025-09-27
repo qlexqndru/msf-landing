@@ -37,9 +37,9 @@ export default function AgendaPage() {
               <div className="divide-y divide-gray-200">
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Opening Plenary | Moldova's vision for countering hybrid threats and enhancing national resilience</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Opening Plenary | Moldova&apos;s vision for countering hybrid threats and enhancing national resilience</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    The opening session will outline Moldova's strategic vision for strengthening national resilience against hybrid threats. It will highlight prevention measures, institutional adaptability, and the importance of international partnerships in safeguarding democracy and security.
+                    The opening session will outline Moldova&apos;s strategic vision for strengthening national resilience against hybrid threats. It will highlight prevention measures, institutional adaptability, and the importance of international partnerships in safeguarding democracy and security.
                   </p>
                 </div>
 
@@ -51,9 +51,9 @@ export default function AgendaPage() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session II | Democracy under siege: foreign information manipulations and interference in Moldova's electoral process</h3>
+                  <h3 className="text-xl font-bold text-blue-800 mb-3">Plenary Session II | Democracy under siege: foreign information manipulations and interference in Moldova&apos;s electoral process</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Participants will examine the growing threat of foreign disinformation and electoral interference targeting Moldova's democratic processes. The discussion will emphasize transparency, citizen awareness, and protective mechanisms to ensure free and fair elections.
+                    Participants will examine the growing threat of foreign disinformation and electoral interference targeting Moldova&apos;s democratic processes. The discussion will emphasize transparency, citizen awareness, and protective mechanisms to ensure free and fair elections.
                   </p>
                 </div>
 
@@ -105,7 +105,7 @@ export default function AgendaPage() {
                       </p>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-blue-800 mb-2">Parallel Session B2 | Behind the Screens: Cyber Threats, Surveillance Tactics, and the Battle for Moldova's Democracy</h4>
+                      <h4 className="font-semibold text-blue-800 mb-2">Parallel Session B2 | Behind the Screens: Cyber Threats, Surveillance Tactics, and the Battle for Moldova&apos;s Democracy</h4>
                       <p className="text-gray-700 text-sm">
                         Participants will explore the rising risks posed by cyberattacks and surveillance tactics that threaten democratic institutions. The session will stress the need for a secure digital infrastructure and strong cyber defense capacities.
                       </p>
@@ -116,7 +116,7 @@ export default function AgendaPage() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-blue-800 mb-3">Final Plenary | From Mapping to Response: A Shared Strategy for Countering Hybrid Threats in the Black Sea region</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    The final plenary will consolidate the conference's findings into a regional strategy for countering hybrid threats. It will underline the shift from threat-mapping to coordinated, actionable responses at the Black Sea level.
+                    The final plenary will consolidate the conference&apos;s findings into a regional strategy for countering hybrid threats. It will underline the shift from threat-mapping to coordinated, actionable responses at the Black Sea level.
                   </p>
                 </div>
 
