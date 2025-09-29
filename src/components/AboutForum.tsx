@@ -45,7 +45,17 @@ export default function AboutForum() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
               <div className="flex items-center justify-center p-4">
                 <Image
-                  src="/mae-logo.jpeg"
+                  src="/logo-kas.png"
+                  alt="Konrad Adenauer Stiftung (KAS)"
+                  width={180}
+                  height={90}
+                  className="max-w-full max-h-24 object-contain"
+                  unoptimized={true}
+                />
+              </div>
+              <div className="flex items-center justify-center p-4">
+                <Image
+                  src="/maeie.png"
                   alt="Ministry of Foreign Affairs of Moldova"
                   width={180}
                   height={90}
@@ -55,18 +65,8 @@ export default function AboutForum() {
               </div>
               <div className="flex items-center justify-center p-4">
                 <Image
-                  src="/logo-ipre.jpeg"
+                  src="/IPRE.png"
                   alt="Institute for European Policies and Reforms (IPRE)"
-                  width={180}
-                  height={90}
-                  className="max-w-full max-h-24 object-contain"
-                  unoptimized={true}
-                />
-              </div>
-              <div className="flex items-center justify-center p-4">
-                <Image
-                  src="/logo-kas.png"
-                  alt="Konrad Adenauer Stiftung (KAS)"
                   width={180}
                   height={90}
                   className="max-w-full max-h-24 object-contain"
