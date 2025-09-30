@@ -48,11 +48,11 @@ export default function KeyTopics() {
     <section id="agenda" className="py-20" style={{ backgroundColor: 'rgba(3, 72, 137, 0.1)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl font-bold" style={{ color: '#034889' }}>
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 sm:mb-12 px-4 sm:px-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-0" style={{ color: '#034889' }}>
             KEY TOPICS
           </h2>
-          <a href="/agenda" className="font-medium flex items-center gap-2 transition-colors duration-200" style={{ color: '#034889' }} onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = '#031226'} onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = '#034889'}>
+          <a href="/agenda" className="font-medium flex items-center gap-2 transition-colors duration-200 text-sm sm:text-base" style={{ color: '#034889' }} onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.color = '#031226'} onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.color = '#034889'}>
             View the full agenda
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -61,11 +61,11 @@ export default function KeyTopics() {
         </div>
 
         {/* Topics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {topics.map((topic, index) => (
             <div 
               key={index}
-              className="relative rounded-lg overflow-hidden h-80 group hover:transform hover:scale-105 transition-all duration-300"
+              className="relative rounded-lg overflow-hidden h-64 sm:h-72 md:h-80 group hover:transform hover:scale-105 transition-all duration-300"
               style={{
                 backgroundImage: `url(${topic.bgImage})`,
                 backgroundSize: 'cover',
@@ -85,11 +85,11 @@ export default function KeyTopics() {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-4 left-4 right-4 z-10">
-                <h3 className="text-white font-bold text-lg leading-tight mb-2">
+              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 z-10">
+                <h3 className="text-white font-bold text-base sm:text-lg leading-tight mb-1 sm:mb-2">
                   {topic.title}
                 </h3>
-                <p className="text-blue-100 text-sm leading-relaxed opacity-95">
+                <p className="text-blue-100 text-xs sm:text-sm leading-relaxed opacity-95">
                   {topic.description}
                 </p>
               </div>

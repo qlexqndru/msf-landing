@@ -76,10 +76,10 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-md flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl max-w-4xl w-full mx-auto max-h-[95vh] flex flex-col shadow-2xl border border-gray-100">
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-md flex items-center justify-center z-50 p-2 sm:p-4">
+      <div className="bg-white rounded-2xl max-w-4xl w-full mx-auto max-h-[98vh] sm:max-h-[95vh] flex flex-col shadow-2xl border border-gray-100">
         {/* Modal Header */}
-        <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 px-8 py-6 rounded-t-2xl">
+        <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-t-2xl">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-300 rounded-full filter blur-3xl"></div>
@@ -87,19 +87,19 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
           </div>
           
           <div className="relative flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="p-2 rounded-lg shadow-md" style={{ backgroundColor: '#F2F2F2' }}>
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="p-1 sm:p-2 rounded-lg shadow-md" style={{ backgroundColor: '#F2F2F2' }}>
                 <Image
                   src="/logo.png"
                   alt="Moldova Security Forum"
                   width={80}
                   height={30}
-                  className="h-8 w-auto"
+                  className="h-6 sm:h-8 w-auto"
                 />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-white">Moldova Security Forum</h2>
-                <p className="text-blue-100">Registration Form 2025</p>
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white">Moldova Security Forum</h2>
+                <p className="text-blue-100 text-sm sm:text-base">Registration Form 2025</p>
               </div>
             </div>
             <button
@@ -119,19 +119,19 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
 
         {/* Modal Body */}
         <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto">
-          <div className="px-8 py-6">
+          <div className="px-4 sm:px-6 md:px-8 py-4 sm:py-6">
             {/* Personal Information Section */}
-            <div className="mb-8">
-              <div className="flex items-center mb-6">
+            <div className="mb-6 sm:mb-8">
+              <div className="flex items-center mb-4 sm:mb-6">
                 <div className="bg-blue-100 p-2 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">Personal Information</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Personal Information</h3>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {/* First Name Field */}
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -145,7 +145,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                       required
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white text-sm sm:text-base"
                       placeholder="Enter your first name"
                     />
                   </div>
@@ -164,7 +164,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                       required
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white text-sm sm:text-base"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -183,7 +183,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                       required
                       value={formData.jobTitle}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white text-sm sm:text-base"
                       placeholder="Your job title or position"
                     />
                   </div>
@@ -202,7 +202,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                       required
                       value={formData.institution}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-gray-50 focus:bg-white text-sm sm:text-base"
                       placeholder="Your institution or organisation"
                     />
                   </div>
@@ -356,19 +356,19 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
           </div>
 
           {/* Modal Footer */}
-          <div className="bg-gray-50 px-8 py-6 rounded-b-2xl border-t border-gray-200">
-            <div className="flex space-x-4">
+          <div className="bg-gray-50 px-4 sm:px-6 md:px-8 py-4 sm:py-6 rounded-b-2xl border-t border-gray-200">
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
               <button
                 type="button"
                 onClick={onClose}
-                className="flex-1 px-6 py-3 text-sm font-semibold text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 rounded-xl transition-all duration-200 shadow-sm hover:shadow"
+                className="flex-1 px-4 sm:px-6 py-2 sm:py-3 text-sm font-semibold text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 rounded-xl transition-all duration-200 shadow-sm hover:shadow"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting || !formData.dataConsent || !formData.termsConsent}
-                className="flex-1 px-6 py-3 text-sm font-semibold text-white rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2 disabled:opacity-50"
+                className="flex-1 px-4 sm:px-6 py-2 sm:py-3 text-sm font-semibold text-white rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl disabled:shadow-none flex items-center justify-center gap-2 disabled:opacity-50"
                 style={{ 
                   backgroundImage: 'linear-gradient(135deg, #034889 0%, #031226 100%)'
                 }}

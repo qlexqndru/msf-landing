@@ -5,13 +5,13 @@ export default function ContactUs() {
     <section id="contact" className="text-white py-20" style={{ backgroundColor: '#034889' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">CONTACT US</h2>
-          <p className="text-blue-100 mb-12 text-lg leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">CONTACT US</h2>
+          <p className="text-blue-100 mb-8 sm:mb-12 text-base sm:text-lg leading-relaxed">
             For more information about the Moldova Security Forum 2025, 
             please reach out to our team using the contact details below:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
             {/* General Inquiries */}
             <div>
               <h3 className="text-2xl font-semibold mb-4">

@@ -57,7 +57,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 min-h-screen flex items-center">
         <div className="text-center w-full">
           {/* Main Title */}
-          <h1 className="hero-title text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight tracking-widest drop-shadow-2xl">
+          <h1 className="hero-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-wide sm:tracking-widest drop-shadow-2xl">
             MOLDOVA<br />
             SECURITY<br />
             FORUM<br />
@@ -65,12 +65,15 @@ export default function Hero() {
           </h1>
 
           {/* Date and Location */}
-          <p className="text-xl md:text-2xl text-white mb-8 font-medium drop-shadow-lg">
-            18-19 November 2025 | MAIB Park, Chișinău
+          <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 font-medium drop-shadow-lg px-4">
+            18-19 November 2025<br className="sm:hidden" />
+            <span className="hidden sm:inline"> | </span>
+            <span className="sm:hidden block mt-1"></span>
+            MAIB Park, Chișinău
           </p>
 
           {/* Description */}
-          <p className="text-lg text-white/95 max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-md">
+          <p className="text-base sm:text-lg text-white/95 max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed drop-shadow-md px-4">
             Join us at one of the most significant security events in the region,
             bringing together leaders, experts, and practitioners from across the
             world to discuss Moldova&apos;s security challenges, regional stability,
@@ -80,7 +83,7 @@ export default function Hero() {
           {/* CTA Button */}
           <button 
             onClick={() => setIsModalOpen(true)}
-            className="text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center gap-3 mx-auto shadow-2xl hover:shadow-xl hover:scale-105 transform"
+            className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 flex items-center gap-2 sm:gap-3 mx-auto shadow-2xl hover:shadow-xl hover:scale-105 transform"
             style={{ 
               backgroundColor: '#034889',
               borderWidth: '2px',

@@ -133,8 +133,8 @@ export default function LastYear() {
         </div>
 
         {/* Photo Carousel */}
-        <div className="relative mb-16">
-          <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative mb-12 sm:mb-16">
+          <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={images[currentImage].src}
               alt={images[currentImage].alt}
@@ -148,39 +148,39 @@ export default function LastYear() {
             {/* Navigation Arrows */}
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200"
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-200"
               aria-label="Previous image"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200"
+              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-all duration-200"
               aria-label="Next image"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
             {/* Image Counter */}
-            <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+            <div className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 bg-black/50 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm">
               {currentImage + 1} / {images.length}
             </div>
           </div>
 
           {/* Thumbnail Navigation */}
-          <div className="flex justify-center mt-6 space-x-2 overflow-x-auto pb-4 pt-4">
+          <div className="flex justify-center mt-4 sm:mt-6 space-x-1 sm:space-x-2 overflow-x-auto pb-4 pt-2 sm:pt-4 px-4">
             {images.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImage(index)}
-                className={`relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 transition-all duration-200 ${
+                className={`relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden flex-shrink-0 transition-all duration-200 ${
                   index === currentImage 
-                    ? 'ring-4 shadow-lg' 
+                    ? 'ring-2 sm:ring-4 shadow-lg' 
                     : 'opacity-70 hover:opacity-100'
                 }`}
                 style={index === currentImage ? { '--tw-ring-color': '#034889' } as React.CSSProperties : {}}
@@ -274,40 +274,40 @@ export default function LastYear() {
 
 
         {/* Rotating Quotes Gallery */}
-        <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-8 text-center relative overflow-hidden min-h-[200px]">
-          <div className="absolute top-4 right-4 text-sm text-gray-500">
+        <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 text-center relative overflow-hidden min-h-[250px] sm:min-h-[200px]">
+          <div className="absolute top-2 sm:top-4 right-2 sm:right-4 text-xs sm:text-sm text-gray-500">
             {currentQuote + 1} / {quotes.length}
           </div>
           
           {/* Navigation Arrows */}
           <button
             onClick={prevQuote}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-600 hover:text-gray-800 p-2 rounded-full shadow-md transition-all duration-200"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-600 hover:text-gray-800 p-1.5 sm:p-2 rounded-full shadow-md transition-all duration-200"
             aria-label="Previous quote"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={nextQuote}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-600 hover:text-gray-800 p-2 rounded-full shadow-md transition-all duration-200"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-600 hover:text-gray-800 p-1.5 sm:p-2 rounded-full shadow-md transition-all duration-200"
             aria-label="Next quote"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
           
-          <div className="transition-all duration-1000 ease-in-out px-12">
-            <blockquote className="text-xl text-gray-800 italic mb-6 leading-relaxed">
+          <div className="transition-all duration-1000 ease-in-out px-8 sm:px-10 md:px-12">
+            <blockquote className="text-base sm:text-lg md:text-xl text-gray-800 italic mb-4 sm:mb-6 leading-relaxed">
               &ldquo;{quotes[currentQuote].text}&rdquo;
             </blockquote>
-            <cite className="text-gray-600 font-semibold block mb-1">
+            <cite className="text-gray-600 font-semibold block mb-1 text-sm sm:text-base">
               {quotes[currentQuote].author}
             </cite>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-xs sm:text-sm">
               {quotes[currentQuote].title}
             </p>
           </div>
