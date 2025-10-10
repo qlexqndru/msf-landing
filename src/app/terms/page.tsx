@@ -20,7 +20,7 @@ export default function TermsPage() {
               </div>
               
               <p>
-                By ticking "I agree" and submitting the registration form, you ("Participant") enter into an agreement 
+                By ticking &ldquo;I agree&rdquo; and submitting the registration form, you (&ldquo;Participant&rdquo;) enter into an agreement 
                 with the Organizer (the entity named on the registration page) and accept these Terms. If you do not 
                 agree, please do not register or attend.
               </p>
