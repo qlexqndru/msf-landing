@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -12,7 +12,7 @@ import ContactUs from '@/components/ContactUs'
 import Footer from '@/components/Footer'
 import PreRegisterModal from '@/components/PreRegisterModal'
 
-export default function Home() {
+function HomeContent() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const searchParams = useSearchParams()
 
@@ -25,7 +25,7 @@ export default function Home() {
   }, [searchParams])
 
   return (
-    <div className="min-h-screen">
+    <>
       <Header />
       <Hero />
       <AboutForum />
@@ -39,6 +39,16 @@ export default function Home() {
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
       />
+    </>
+  )
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen">
+      <Suspense fallback={<div>Loading...</div>}>
+        <HomeContent />
+      </Suspense>
     </div>
   )
 }
