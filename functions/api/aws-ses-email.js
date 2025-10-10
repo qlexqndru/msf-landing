@@ -3,6 +3,14 @@ import { AwsClient } from 'aws4fetch';
 // AWS SES implementation for Cloudflare Workers
 async function sendEmailViaSES(env, formData) {
   // Check if we have the required environment variables
+  console.log('Email function called with:', {
+    hasAccessKey: !!env.AWS_ACCESS_KEY_ID,
+    hasSecretKey: !!env.AWS_SECRET_ACCESS_KEY,
+    region: env.AWS_REGION,
+    senderEmail: env.SENDER_EMAIL,
+    recipientEmail: formData.email
+  });
+  
   if (!env.AWS_ACCESS_KEY_ID || !env.AWS_SECRET_ACCESS_KEY) {
     console.log('AWS credentials not configured, skipping email send');
     return false;

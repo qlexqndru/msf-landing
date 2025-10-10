@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { sendEmailViaSES } from './aws-ses-email';
+import { sendEmailViaSES } from './aws-ses-email.js';
 
 const SEATABLE_APP_TOKEN = '46115d34ded6894cdbad78a5da9f6b6488230adc';
 const SEATABLE_BASE_UUID = '39b706f5-40d3-4807-9152-df74547e3eb6';
@@ -59,6 +59,17 @@ export async function onRequestPost(context: any) {
     // Send confirmation email
     let emailSent = false;
     let emailError = null;
+    
+    // Debug environment variables
+    console.log('Environment debug:', {
+      hasEnv: !!env,
+      envKeys: env ? Object.keys(env) : 'no env',
+      awsAccessKey: env?.AWS_ACCESS_KEY_ID ? 'present' : 'missing',
+      awsSecretKey: env?.AWS_SECRET_ACCESS_KEY ? 'present' : 'missing',
+      awsRegion: env?.AWS_REGION || 'not set',
+      senderEmail: env?.SENDER_EMAIL || 'not set'
+    });
+    
     try {
       emailSent = await sendEmailViaSES(env, formData);
       console.log(`Email sent: ${emailSent} to ${formData.email}`);
