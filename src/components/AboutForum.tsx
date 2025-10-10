@@ -25,7 +25,7 @@ export default function AboutForum() {
               18–19 November 2025<br className="sm:hidden" />
               <span className="hidden sm:inline"> | </span>
               <span className="sm:hidden block mt-1"></span>
-              MAIB Park, Chișinău
+              maib Park, Chișinău
             </p>
             <p className="text-base sm:text-lg font-medium" style={{ color: '#034889' }}>Expected 250+ Participants</p>
           </div>
@@ -71,7 +71,7 @@ export default function AboutForum() {
               </div>
               <div className="flex items-center justify-center p-2 sm:p-4">
                 <Image
-                  src="/IPRE.png"
+                  src="/10-RGB-02.png"
                   alt="Institute for European Policies and Reforms (IPRE)"
                   width={180}
                   height={90}
@@ -81,7 +81,7 @@ export default function AboutForum() {
               </div>
               <div className="flex items-center justify-center p-2 sm:p-4">
                 <Image
-                  src="/logo-nato.jpg"
+                  src="/nato2.png"
                   alt="NATO"
                   width={300}
                   height={180}

@@ -69,7 +69,7 @@ export default function Hero() {
             18-19 November 2025<br className="sm:hidden" />
             <span className="hidden sm:inline"> | </span>
             <span className="sm:hidden block mt-1"></span>
-            MAIB Park, Chișinău
+            maib Park, Chișinău
           </p>
 
           {/* Description */}

@@ -332,42 +332,54 @@ export default function LastYear() {
           </div>
         </div>
 
-        {/* Additional Information */}
-        <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Organizers</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
-                  <span>Konrad Adenauer Foundation Office in the Republic of Moldova</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
-                  <span>Institute for European Policies and Reforms (IPRE)</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: '#034889' }}></div>
-                  <span>NATO Liaison Office in Moldova</span>
-                </li>
-              </ul>
+        {/* Organizers */}
+        <div className="mt-16 bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg max-w-5xl mx-auto">
+          <h3 className="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-6 sm:mb-8">Organized by</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 items-center justify-items-center">
+            <div className="flex items-center justify-center p-2 sm:p-4">
+              <Image
+                src="/logo-kas.png"
+                alt="Konrad Adenauer Stiftung (KAS)"
+                width={180}
+                height={90}
+                className="max-w-full max-h-16 sm:max-h-20 md:max-h-24 object-contain"
+                unoptimized={true}
+              />
             </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Partners</h3>
-              <div className="text-gray-700 text-sm leading-relaxed">
-                <p className="mb-3">The event benefited from partnerships and support of:</p>
-                <p>International Republican Institute (IRI), Soros Foundation Moldova, European Union Partnership Mission (EUPM), Tony Blair Institute (TBI), Platform for Security and Defense Initiatives (PISA), Geneva Security Sector Governance Center (DCAF), Geneva Center for Security Policy (GCSP), New Strategy Center (Bucharest), New Europe Center (Kyiv), Aspen Institute, and other national and international organizations.</p>
-              </div>
+            <div className="flex items-center justify-center p-2 sm:p-4">
+              <Image
+                src="/maeie.png"
+                alt="Ministry of Foreign Affairs of Moldova"
+                width={180}
+                height={90}
+                className="max-w-full max-h-16 sm:max-h-20 md:max-h-24 object-contain"
+                unoptimized={true}
+              />
+            </div>
+            <div className="flex items-center justify-center p-2 sm:p-4">
+              <Image
+                src="/10-RGB-02.png"
+                alt="Institute for European Policies and Reforms (IPRE)"
+                width={180}
+                height={90}
+                className="max-w-full max-h-16 sm:max-h-20 md:max-h-24 object-contain"
+                unoptimized={true}
+              />
+            </div>
+            <div className="flex items-center justify-center p-2 sm:p-4">
+              <Image
+                src="/nato2.png"
+                alt="NATO"
+                width={300}
+                height={180}
+                className="max-w-full max-h-20 sm:max-h-32 md:max-h-48 object-contain"
+                unoptimized={true}
+              />
             </div>
           </div>
-          
-          <div className="mt-8 pt-6 border-t border-gray-200 text-center">
-            <p className="text-gray-600">
-              More details, including the video recording of the Forum, are available on the official website 
-              <a href="https://www.securityforum.md" className="text-blue-600 hover:text-blue-800 font-medium ml-1" target="_blank" rel="noopener noreferrer">
-                www.securityforum.md
-              </a>
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <p className="text-center text-gray-600 text-sm">
+              In partnership with regional and international security organizations
             </p>
           </div>
         </div>

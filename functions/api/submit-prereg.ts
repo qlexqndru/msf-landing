@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { sendEmailViaSES } from './aws-ses-email';
 
 const SEATABLE_APP_TOKEN = '46115d34ded6894cdbad78a5da9f6b6488230adc';
 const SEATABLE_BASE_UUID = '39b706f5-40d3-4807-9152-df74547e3eb6';
@@ -6,8 +7,9 @@ const SEATABLE_SERVER = 'https://cloud.seatable.io';
 const TABLE_NAME = 'prereg';
 
 export async function onRequestPost(context: any) {
+  const { request, env } = context;
   try {
-    const formData = await context.request.json();
+    const formData = await request.json();
 
     // Prepare data for SeaTable
     const seatableData = {
@@ -54,9 +56,26 @@ export async function onRequestPost(context: any) {
       }
     );
 
+    // Send confirmation email
+    let emailSent = false;
+    let emailError = null;
+    try {
+      emailSent = await sendEmailViaSES(env, formData);
+      console.log(`Email sent: ${emailSent} to ${formData.email}`);
+    } catch (error: any) {
+      emailError = error.message || 'Unknown email error';
+      console.error('Failed to send confirmation email:', error);
+    }
+
     return new Response(JSON.stringify({ 
       success: true, 
-      message: 'Pre-registration submitted successfully!' 
+      message: 'Pre-registration submitted successfully!',
+      debug: {
+        emailSent,
+        emailError,
+        hasAwsCredentials: !!(env.AWS_ACCESS_KEY_ID && env.AWS_SECRET_ACCESS_KEY),
+        senderEmail: env.SENDER_EMAIL || 'info@securityforum.md'
+      }
     }), {
       headers: {
         'Content-Type': 'application/json',

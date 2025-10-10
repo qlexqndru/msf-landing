@@ -10,16 +10,16 @@ interface PreRegisterModalProps {
 
 export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalProps) {
   const [formData, setFormData] = useState({
-    firstName: 'John',
-    lastName: 'Doe',
-    jobTitle: 'Security Analyst',
-    institution: 'Ministry of Defense',
-    email: 'john.doe@example.com',
-    phone: '+373 69 123 456',
-    dietaryPreferences: 'Vegetarian, no nuts',
-    accessibilityNeeds: 'Wheelchair accessible seating',
-    dataConsent: true,
-    termsConsent: true
+    firstName: '',
+    lastName: '',
+    jobTitle: '',
+    institution: '',
+    email: '',
+    phone: '',
+    dietaryPreferences: '',
+    accessibilityNeeds: '',
+    dataConsent: false,
+    termsConsent: false
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -347,7 +347,18 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
                       className="mt-1 h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded transition-colors"
                     />
                     <span className="ml-3 text-sm text-gray-700 leading-relaxed">
-                      <strong>Terms & Conditions:</strong> I agree to the event&apos;s terms & conditions and code of conduct. *
+                      I agree to the{' '}
+                      <a 
+                        href="/terms" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-blue-600 hover:text-blue-800 underline font-medium"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                        }}
+                      >
+                        Moldova Security Forum — Terms of Registration & Privacy Notice (GDPR)
+                      </a> *
                     </span>
                   </label>
                 </div>

@@ -5,42 +5,42 @@ export default function KeyTopics() {
     {
       title: "Moldova's Vision for Countering Hybrid Threats",
       description: "Strategic approaches for enhancing national resilience and institutional adaptability",
-      bgImage: "/MSF-BG00-10.jpg"
+      bgImage: "/msf1.jpg"
     },
     {
       title: "Building Resilience in the Black Sea Region", 
       description: "Regional cooperation frameworks and joint initiatives for collective security",
-      bgImage: "/MSF-BG00-20.jpg"
+      bgImage: "/msf2.jpg"
     },
     {
       title: "Democracy Under Siege: Electoral Interference",
       description: "Foreign information manipulations and threats to Moldova's democratic processes",
-      bgImage: "/MSF-BG00-30.jpg"
+      bgImage: "/msf3.jpeg"
     },
     {
       title: "Crisis Management & Hybrid Threats",
       description: "Innovative strategies for turning vulnerabilities into resilience capabilities",
-      bgImage: "/MSF-BG00-40.jpg"
+      bgImage: "/msf4.jpg"
     },
     {
       title: "Fight Against Disinformation",
       description: "Strategic communication and building credible narratives against hostile campaigns",
-      bgImage: "/MSF-BG00-50.jpg"
+      bgImage: "/msf5.jpg"
     },
     {
       title: "Energy Security & Strategic Cooperation",
       description: "Regional partnerships for reducing energy vulnerabilities and dependencies",
-      bgImage: "/MSF-BG00-60.jpg"
+      bgImage: "/msf6.png"
     },
     {
       title: "Electoral Corruption & Financial Streams",
       description: "Monitoring tools and preventive mechanisms to protect electoral integrity",
-      bgImage: "/MSF-BG010-0.jpg"
+      bgImage: "/msf7.jpg"
     },
     {
       title: "Cyber Threats & Surveillance Tactics",
       description: "Digital infrastructure security and cyber defense against democratic threats",
-      bgImage: "/MSF-BG-.jpg"
+      bgImage: "/msf8.jpg"
     }
   ]
 
