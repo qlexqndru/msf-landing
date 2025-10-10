@@ -21,6 +21,8 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
     dataConsent: false,
     termsConsent: false
   })
+  
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target
@@ -31,6 +33,11 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
   }
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  
+  const handleClose = () => {
+    setShowSuccess(false)
+    onClose()
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -48,7 +55,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
       const result = await response.json()
 
       if (result.success) {
-        alert('Thank you for registering! We will contact you soon.')
+        setShowSuccess(true)
         setFormData({
           firstName: '',
           lastName: '',
@@ -61,7 +68,6 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
           dataConsent: false,
           termsConsent: false
         })
-        onClose()
       } else {
         alert(`Error: ${result.message}`)
       }
@@ -103,7 +109,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
               </div>
             </div>
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="text-blue-100 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,12 +119,70 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
           </div>
           
           <p className="text-blue-100 mt-3 relative">
-            Please fill out all required fields to secure your spot at this premier security forum
+            {showSuccess ? 'Registration Successful!' : 'Please fill out all required fields to secure your spot at this premier security forum'}
           </p>
         </div>
 
         {/* Modal Body */}
-        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto">
+        {showSuccess ? (
+          <div className="flex-1 flex items-center justify-center p-4 sm:p-6 md:p-8">
+            <div className="text-center max-w-2xl mx-auto">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Registration Received!</h3>
+              
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                Thank you for registering for the Moldova Security Forum 2025. We have successfully received your application.
+              </p>
+              
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">What happens next?</h4>
+                <ul className="text-left text-gray-700 space-y-2">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Our team will review all applications
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Selected participants will receive confirmation emails
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    You&apos;ll receive detailed event information and logistics
+                  </li>
+                </ul>
+              </div>
+              
+              <p className="text-gray-600 mb-8">
+                For any questions, please contact us at{' '}
+                <a href="mailto:info@securityforum.md" className="text-blue-600 hover:text-blue-800 font-medium">
+                  info@securityforum.md
+                </a>
+              </p>
+              
+              <button
+                onClick={handleClose}
+                className="px-8 py-3 text-white rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl"
+                style={{ 
+                  backgroundImage: 'linear-gradient(135deg, #034889 0%, #031226 100%)'
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto">
           <div className="px-4 sm:px-6 md:px-8 py-4 sm:py-6">
             {/* Personal Information Section */}
             <div className="mb-6 sm:mb-8">
@@ -414,6 +478,7 @@ export default function PreRegisterModal({ isOpen, onClose }: PreRegisterModalPr
             </div>
           </div>
         </form>
+        )}
       </div>
     </div>
   )

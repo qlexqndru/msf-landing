@@ -85,7 +85,7 @@ export async function onRequestPost(context: any) {
         emailSent,
         emailError,
         hasAwsCredentials: !!(env.AWS_ACCESS_KEY_ID && env.AWS_SECRET_ACCESS_KEY),
-        senderEmail: env.SENDER_EMAIL || 'info@securityforum.md'
+        senderEmail: env.SENDER_EMAIL || 'noreply@myf.md'
       }
     }), {
       headers: {

@@ -22,16 +22,16 @@ async function sendEmailViaSES(env, formData) {
     region: env.AWS_REGION || 'eu-central-1'
   });
 
-  const senderEmail = env.SENDER_EMAIL || 'info@securityforum.md';
+  const senderEmail = env.SENDER_EMAIL || 'noreply@myf.md';
   const senderName = 'Moldova Security Forum';
 
-  // Email content will be set when you provide the text
+  // Email content
   let emailHtml = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Registration Confirmation - Moldova Security Forum 2025</title>
+  <title>Confirmation of Registration - Moldova Security Forum 2025</title>
 </head>
 <body style="margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0">
@@ -39,38 +39,31 @@ async function sendEmailViaSES(env, formData) {
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; margin:20px 0; border-radius:8px; overflow:hidden;">
           <tr>
-            <td style="background: linear-gradient(135deg, #034889 0%, #031226 100%); padding:30px; text-align:center;">
-              <h1 style="color:#ffffff; margin:0; font-size:24px;">Moldova Security Forum 2025</h1>
-              <p style="color:#ffffff; margin:10px 0 0; font-size:14px;">18-19 November 2025 | maib Park, Chișinău</p>
+            <td style="padding:0; text-align:center;">
+              <img src="https://img.unde.io/2025-10-10T08:09:43.662923697_811b8aaf-873f-4a07-a1e5-be3e26003575" alt="Moldova Security Forum 2025" style="width:100%; height:auto; display:block; max-height:200px; object-fit:cover;">
             </td>
           </tr>
           <tr>
             <td style="padding:30px;">
-              <h2 style="color:#034889; margin:0 0 20px;">Registration Received</h2>
               <p style="color:#666666; line-height:1.6; margin:0 0 20px;">
                 Dear ${formData.firstName} ${formData.lastName},
               </p>
               <p style="color:#666666; line-height:1.6; margin:0 0 20px;">
-                Thank you for registering for the Moldova Security Forum 2025!
+                Thank you for registering for the Moldova Security Forum 2025, which will take place on 18–19 November 2025 in Chișinău, Republic of Moldova.
               </p>
               <p style="color:#666666; line-height:1.6; margin:0 0 20px;">
-                We have successfully received your registration. Our team will review all applications and contact selected participants with confirmation and additional details.
+                We are pleased to confirm that your registration has been successfully received. Due to the limited number of seats available at the venue, all registrations are currently being reviewed by the organizing committee.
               </p>
-              <div style="background-color:#f8f8f8; padding:20px; border-radius:5px; margin:20px 0;">
-                <h3 style="color:#034889; margin:0 0 15px;">Registration Details:</h3>
-                <p style="color:#666666; margin:5px 0;"><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
-                <p style="color:#666666; margin:5px 0;"><strong>Institution:</strong> ${formData.institution}</p>
-                <p style="color:#666666; margin:5px 0;"><strong>Position:</strong> ${formData.jobTitle}</p>
-                <p style="color:#666666; margin:5px 0;"><strong>Email:</strong> ${formData.email}</p>
-                ${formData.phone ? `<p style="color:#666666; margin:5px 0;"><strong>Phone:</strong> ${formData.phone}</p>` : ''}
-              </div>
-              <p style="color:#666666; line-height:1.6; margin:20px 0;">
-                For any questions, please contact us at <a href="mailto:info@securityforum.md" style="color:#034889;">info@securityforum.md</a>
+              <p style="color:#666666; line-height:1.6; margin:0 0 20px;">
+                You will receive a follow-up email with confirmation of participation and a personal QR code for check-in, should your registration be accepted. Please note that access to the Forum will be granted only to confirmed participants.
+              </p>
+              <p style="color:#666666; line-height:1.6; margin:0 0 20px;">
+                We sincerely appreciate your interest in the Moldova Security Forum and your engagement in advancing dialogue on regional security and democratic resilience. If you have any questions please do not hesitate to reach out at <a href="mailto:info@securityforum.md" style="color:#034889; text-decoration:none;">info@securityforum.md</a>.
               </p>
               <p style="color:#666666; line-height:1.6; margin:30px 0 0;">
-                Best regards,<br>
+                Warm regards,<br>
                 <br>
-                The MSF 2025 Organizing Team
+                Moldova Security Forum Team
               </p>
             </td>
           </tr>
@@ -86,31 +79,22 @@ async function sendEmailViaSES(env, formData) {
 </body>
 </html>`;
 
-  let emailText = `Registration Confirmation - Moldova Security Forum 2025
+  let emailText = `Confirmation of Registration - Moldova Security Forum 2025
 
 Dear ${formData.firstName} ${formData.lastName},
 
-Thank you for registering for the Moldova Security Forum 2025!
+Thank you for registering for the Moldova Security Forum 2025, which will take place on 18–19 November 2025 in Chișinău, Republic of Moldova.
 
-We have successfully received your registration. Our team will review all applications and contact selected participants with confirmation and additional details.
+We are pleased to confirm that your registration has been successfully received. Due to the limited number of seats available at the venue, all registrations are currently being reviewed by the organizing committee.
 
-Registration Details:
-- Name: ${formData.firstName} ${formData.lastName}
-- Institution: ${formData.institution}
-- Position: ${formData.jobTitle}
-- Email: ${formData.email}
-${formData.phone ? `- Phone: ${formData.phone}` : ''}
+You will receive a follow-up email with confirmation of participation and a personal QR code for check-in, should your registration be accepted. Please note that access to the Forum will be granted only to confirmed participants.
 
-Event Details:
-- Date: 18-19 November 2025
-- Location: maib Park, Chișinău
+We sincerely appreciate your interest in the Moldova Security Forum and your engagement in advancing dialogue on regional security and democratic resilience. If you have any questions please do not hesitate to reach out at info@securityforum.md.
 
-For any questions, please contact us at info@securityforum.md
+Warm regards,
+Moldova Security Forum Team`;
 
-Best regards,
-The MSF 2025 Organizing Team`;
-
-  const subject = 'Registration Confirmation - Moldova Security Forum 2025';
+  const subject = 'Confirmation of Registration - Moldova Security Forum 2025';
 
   try {
     // Use SES v2 API endpoint
