@@ -45,6 +45,12 @@ export default function Header() {
             >
               Contact Us
             </Link>
+            <Link 
+              href="/register" 
+              className="text-gray-700 hover:opacity-70 font-medium"
+            >
+              Register
+            </Link>
           </nav>
 
           {/* Mobile Menu Button & Register Button */}
@@ -110,6 +116,13 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
+              </Link>
+              <Link 
+                href="/register" 
+                className="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-md"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Register
               </Link>
             </div>
           </div>
