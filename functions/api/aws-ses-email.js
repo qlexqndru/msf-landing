@@ -39,8 +39,8 @@ async function sendEmailViaSES(env, formData) {
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; margin:20px 0; border-radius:8px; overflow:hidden;">
           <tr>
-            <td style="padding:0; text-align:center;">
-              <img src="https://img.unde.io/2025-10-10T08:09:43.662923697_811b8aaf-873f-4a07-a1e5-be3e26003575" alt="Moldova Security Forum 2025" style="width:100%; height:auto; display:block; max-height:200px; object-fit:cover;">
+            <td style="padding:30px; text-align:center;">
+              <img src="https://img.unde.io/2025-10-10T08:09:43.662923697_811b8aaf-873f-4a07-a1e5-be3e26003575" alt="Moldova Security Forum 2025" style="width:120px; height:120px; display:block; margin:0 auto; object-fit:contain;">
             </td>
           </tr>
           <tr>
